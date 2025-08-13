@@ -1,0 +1,260 @@
+python -m venv drowsy
+
+drowsy\scripts\activate
+
+python --version
+Python 3.7.0
+
+pip list
+Package    Version
+---------- -------
+pip        10.0.1
+setuptools 39.0.1
+You are using pip version 10.0.1, however version 24.0 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+python -m pip install --upgrade pip
+Collecting pip
+  Using cached https://files.pythonhosted.org/packages/8a/6a/19e9fe04fca059ccf770861c7d5721ab4c2aebc539889e97c7977528a53b/pip-24.0-py3-none-any.whl
+Installing collected packages: pip
+  Found existing installation: pip 10.0.1
+    Uninstalling pip-10.0.1:
+      Successfully uninstalled pip-10.0.1
+Successfully installed pip-24.0
+
+pip install dlib-19.19.0-cp37-cp37m-win_amd64.whl
+Installing collected packages: dlib
+Successfully installed dlib-19.19.0
+
+pip install -r requirements.txt
+Collecting numpy>=1.21.6 (from -r requirements.txt (line 1))
+  Using cached numpy-1.21.6-cp37-cp37m-win_amd64.whl.metadata (2.2 kB)
+Collecting imutils>=0.5.4 (from -r requirements.txt (line 2))
+  Using cached imutils-0.5.4-py3-none-any.whl
+Requirement already satisfied: dlib>=19.19.0 in c:\users\chbhu\desktop\arrange\official\drowsiness-detection-master\drowsy\lib\site-packages (from -r requirements.txt (line 3)) (19.19.0)
+Collecting opencv-python>=4.2.0.32 (from -r requirements.txt (line 4))
+  Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl.metadata (19 kB)
+Collecting matplotlib>=3.1.3 (from -r requirements.txt (line 5))
+  Using cached matplotlib-3.5.3-cp37-cp37m-win_amd64.whl.metadata (6.7 kB)
+Collecting scipy>=1.7.3 (from -r requirements.txt (line 6))
+  Using cached scipy-1.7.3-cp37-cp37m-win_amd64.whl.metadata (2.2 kB)
+Collecting pygame>=2.6.1 (from -r requirements.txt (line 7))
+  Using cached pygame-2.6.1-cp37-cp37m-win_amd64.whl.metadata (13 kB)
+Collecting scikit-learn>=0.22.2.post1 (from -r requirements.txt (line 8))
+  Using cached scikit_learn-1.0.2-cp37-cp37m-win_amd64.whl.metadata (10 kB)
+Collecting cycler>=0.10 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached cycler-0.11.0-py3-none-any.whl.metadata (785 bytes)
+Collecting fonttools>=4.22.0 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached fonttools-4.38.0-py3-none-any.whl.metadata (138 kB)
+Collecting kiwisolver>=1.0.1 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached kiwisolver-1.4.5-cp37-cp37m-win_amd64.whl.metadata (6.5 kB)
+Collecting packaging>=20.0 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Collecting pillow>=6.2.0 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached Pillow-9.5.0-cp37-cp37m-win_amd64.whl.metadata (9.7 kB)
+Collecting pyparsing>=2.2.1 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached pyparsing-3.1.4-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting joblib>=0.11 (from scikit-learn>=0.22.2.post1->-r requirements.txt (line 8))
+  Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn>=0.22.2.post1->-r requirements.txt (line 8))
+  Using cached threadpoolctl-3.1.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting typing-extensions (from kiwisolver>=1.0.1->matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached typing_extensions-4.7.1-py3-none-any.whl.metadata (3.1 kB)
+Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib>=3.1.3->-r requirements.txt (line 5))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Using cached numpy-1.21.6-cp37-cp37m-win_amd64.whl (14.0 MB)
+Using cached opencv_python-4.12.0.88-cp37-abi3-win_amd64.whl (39.0 MB)
+Using cached matplotlib-3.5.3-cp37-cp37m-win_amd64.whl (7.2 MB)
+Using cached scipy-1.7.3-cp37-cp37m-win_amd64.whl (34.1 MB)
+Using cached pygame-2.6.1-cp37-cp37m-win_amd64.whl (10.8 MB)
+Using cached scikit_learn-1.0.2-cp37-cp37m-win_amd64.whl (7.1 MB)
+Using cached cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Using cached fonttools-4.38.0-py3-none-any.whl (965 kB)
+Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
+Using cached kiwisolver-1.4.5-cp37-cp37m-win_amd64.whl (55 kB)
+Using cached packaging-24.0-py3-none-any.whl (53 kB)
+Using cached Pillow-9.5.0-cp37-cp37m-win_amd64.whl (2.5 MB)
+Using cached pyparsing-3.1.4-py3-none-any.whl (104 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached threadpoolctl-3.1.0-py3-none-any.whl (14 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached typing_extensions-4.7.1-py3-none-any.whl (33 kB)
+Installing collected packages: imutils, typing-extensions, threadpoolctl, six, pyparsing, pygame, pillow, packaging, numpy, joblib, fonttools, cycler, scipy, python-dateutil, opencv-python, kiwisolver, scikit-learn, matplotlib
+Successfully installed cycler-0.11.0 fonttools-4.38.0 imutils-0.5.4 joblib-1.3.2 kiwisolver-1.4.5 matplotlib-3.5.3 numpy-1.21.6 opencv-python-4.12.0.88 packaging-24.0 pillow-9.5.0 pygame-2.6.1 pyparsing-3.1.4 python-dateutil-2.9.0.post0 scikit-learn-1.0.2 scipy-1.7.3 six-1.17.0 threadpoolctl-3.1.0 typing-extensions-4.7.1
+
+python drowsiness_detector.py
+pygame 2.6.1 (SDL 2.28.4, Python 3.7.0)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+Return true if training is successful : True
+loading facial landmark predictor...
+starting video stream thread...
+open init time sleep
+init_message
+open list = [215.00655832748149, 288.30691403818906, 285.53809681456664, 239.74313501282464, 214.641844244584, 259.85914255111925, 291.65351779090145]
+OPEN_EAR = 256.392744111381
+
+close init time sleep
+init_message
+close list = [251.6825683285297, 270.6347719698912, 270.6347719698912, 270.6347719698912, 270.6347719698912, 270.6347719698912, 270.6347719698912]
+CLOSE_EAR = 267.9273143068395
+
+The last EAR_THRESH's value : 262.16002920911023
+
+1st ALARM
+The time eyes is being opened before the alarm went off : 56.579
+closing time : 0.369
+predicted label :  [[2.]]
+The time eyes were being offed : [0.388]
+2st ALARM
+The time eyes is being opened before the alarm went off : 1.389
+closing time : 0.375
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535]
+3st ALARM
+The time eyes is being opened before the alarm went off : 0.599
+closing time : 0.381
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099]
+4st ALARM
+The time eyes is being opened before the alarm went off : 3.545
+closing time : 0.359
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049]
+5st ALARM
+The time eyes is being opened before the alarm went off : 2.759
+closing time : 0.358
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4]
+6st ALARM
+The time eyes is being opened before the alarm went off : 0.481
+closing time : 0.364
+predicted label :  [[1.]]
+7st ALARM
+The time eyes is being opened before the alarm went off : 0.481
+closing time : 3.756
+predicted label :  [[0.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96]
+8st ALARM
+The time eyes is being opened before the alarm went off : 4.027
+closing time : 0.355
+predicted label :  [[1.]]
+9st ALARM
+The time eyes is being opened before the alarm went off : 4.027
+closing time : 3.759
+predicted label :  [[0.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669]
+10st ALARM
+The time eyes is being opened before the alarm went off : 7.014
+closing time : 0.392
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597]
+11st ALARM
+The time eyes is being opened before the alarm went off : 4.318
+closing time : 0.401
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757]
+12st ALARM
+The time eyes is being opened before the alarm went off : 4.276
+closing time : 0.395
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377]
+13st ALARM
+The time eyes is being opened before the alarm went off : 2.52
+closing time : 0.394
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061]
+14st ALARM
+The time eyes is being opened before the alarm went off : 1.417
+closing time : 0.379
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478]
+15st ALARM
+The time eyes is being opened before the alarm went off : 0.539
+closing time : 0.378
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665]
+16st ALARM
+The time eyes is being opened before the alarm went off : 2.454
+closing time : 0.458
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247]
+17st ALARM
+The time eyes is being opened before the alarm went off : 2.376
+closing time : 0.391
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667]
+18st ALARM
+The time eyes is being opened before the alarm went off : 3.454
+closing time : 0.358
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38]
+19st ALARM
+The time eyes is being opened before the alarm went off : 4.043
+closing time : 0.455
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496]
+20st ALARM
+The time eyes is being opened before the alarm went off : 0.546
+closing time : 0.411
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482]
+21st ALARM
+The time eyes is being opened before the alarm went off : 1.774
+closing time : 0.367
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525]
+22st ALARM
+The time eyes is being opened before the alarm went off : 7.697
+closing time : 0.369
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429]
+23st ALARM
+The time eyes is being opened before the alarm went off : 0.685
+closing time : 0.365
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465]
+24st ALARM
+The time eyes is being opened before the alarm went off : 0.722
+closing time : 0.366
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465, 0.412]
+25st ALARM
+The time eyes is being opened before the alarm went off : 0.547
+closing time : 0.443
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465, 0.412, 0.731]
+26st ALARM
+The time eyes is being opened before the alarm went off : 1.376
+closing time : 0.359
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465, 0.412, 0.731, 0.644]
+27st ALARM
+The time eyes is being opened before the alarm went off : 9.424
+closing time : 7.014
+predicted label :  [[0.]]
+28st ALARM
+The time eyes is being opened before the alarm went off : 9.424
+closing time : 7.035
+predicted label :  [[0.]]
+29st ALARM
+The time eyes is being opened before the alarm went off : 9.424
+closing time : 7.057
+predicted label :  [[0.]]
+30st ALARM
+The time eyes is being opened before the alarm went off : 9.424
+closing time : 8.124
+predicted label :  [[0.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465, 0.412, 0.731, 0.644, 8.31]
+31st ALARM
+The time eyes is being opened before the alarm went off : 4.553
+closing time : 0.347
+predicted label :  [[1.]]
+The time eyes were being offed : [0.388, 0.535, 2.099, 1.049, 0.4, 3.96, 5.669, 1.597, 3.757, 2.377, 1.061, 0.478, 0.665, 2.247, 0.667, 3.38, 0.496, 0.482, 0.525, 0.429, 0.465, 0.412, 0.731, 0.644, 8.31, 0.733]
+32st ALARM
+The time eyes is being opened before the alarm went off : 1.051
+closing time : 0.341
+predicted label :  [[1.]]
+
+
