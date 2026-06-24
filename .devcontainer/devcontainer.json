@@ -16,7 +16,6 @@
       ]
     }
   },
-  "forwardPorts": [],
   "remoteUser": "vscode",
   "mounts": [
     "source=${localWorkspaceFolder}/dataset,target=/workspace/dataset,type=bind",
